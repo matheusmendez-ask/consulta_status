@@ -29,7 +29,7 @@ st.markdown(
 )
 
 # Titulo
-st.title('Consulta de Status :package:')
+st.title('Consulta de Status ":package:"')
 
 # Solicitar o numeroOrigem do usuário
 numeroOrigem = st.text_input('Digite o Número do Pedido Conforme o Tiny:')
