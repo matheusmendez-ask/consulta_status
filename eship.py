@@ -2,7 +2,34 @@ import streamlit as st
 import requests
 import json
 
-st.title('Consulta de Status de Pedido')
+# Configurar o título, ícone e layout da página
+st.set_page_config(
+    page_title="Consulta de Status de Pedido",
+    page_icon=":package:",  # Ícone personalizado
+    layout="wide"
+)
+
+# Personalizar o estilo dos elementos
+st.markdown(
+    f"""
+    <style>
+        .reportview-container {{
+            background: #f5f5f5;  # Cor de fundo da página
+        }}
+        .sidebar .sidebar-content {{
+            background: #3498db;  # Cor de fundo da barra lateral
+            color: #3498db;  # Cor do texto na barra lateral
+        }}
+        .main .block-container {{
+            background: #3498db;  # Cor de fundo dos blocos principais
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Titulo
+st.title('Consulta de Status')
 
 # Solicitar o numeroOrigem do usuário
 numeroOrigem = st.text_input('Digite o Número do Pedido Conforme o Tiny:')
