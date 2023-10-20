@@ -24,7 +24,12 @@ if st.button('Consultar'):
         response = requests.post(url, params=params, data=payload)
         r_pag_text = response.text
         json_response = json.loads(r_pag_text)
-        status = json_response['corpo']['status']['dados']
+        condicional = json_response['erros']
+
+        if isinstance(condicional, list) and 'erro' in condicional[0]:
+            status = json_response['erros'][0]['erro']['mensagem']
+        else:
+            status = json_response['corpo']['status']['dados']
 
         # Exibir a resposta
         st.subheader('Resposta:')
