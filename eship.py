@@ -5,7 +5,7 @@ import json
 st.title('Consulta de Status de Pedido')
 
 # Solicitar o numeroOrigem do usuário
-numeroOrigem = st.text_input('Digite o numeroOrigem:')
+numeroOrigem = st.text_input('Digite o Número do Pedido Conforme o Tiny:')
 
 if st.button('Consultar'):
     if numeroOrigem:
