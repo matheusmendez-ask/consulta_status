@@ -24,10 +24,11 @@ if st.button('Consultar'):
         response = requests.post(url, params=params, data=payload)
         r_pag_text = response.text
         json_response = json.loads(r_pag_text)
+        status = json_response['corpo']['status']['dados']
 
         # Exibir a resposta
         st.subheader('Resposta:')
-        st.json(json_response)
+        st.json(status)
     else:
         st.warning('Por favor, insira um Número.')
 
