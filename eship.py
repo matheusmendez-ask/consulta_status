@@ -28,7 +28,7 @@ if st.button('Consultar'):
 
         # Exibir a resposta
         st.subheader('Resposta:')
-        st.json(status)
+        st.text(status)
     else:
         st.warning('Por favor, insira um Número.')
 
