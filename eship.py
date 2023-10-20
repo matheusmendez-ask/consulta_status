@@ -29,6 +29,6 @@ if st.button('Consultar'):
         st.subheader('Resposta:')
         st.json(json_response)
     else:
-        st.warning('Por favor, insira um numeroOrigem.')
+        st.warning('Por favor, insira um Número.')
 
 st.write('Desenvolvido com Streamlit')
