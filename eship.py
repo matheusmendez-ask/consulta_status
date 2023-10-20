@@ -60,8 +60,6 @@ if st.button('Consultar'):
 
         # Exibir a resposta
         st.subheader('Resposta:')
-        st.text(status)
+        st.write(status)
     else:
         st.warning('Por favor, insira um Número.')
-
-st.write('Desenvolvido com Streamlit')
